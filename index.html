@@ -21,6 +21,10 @@ header {
   text-align: left;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
 }
+header img {
+  max-width: 150px;
+  height: auto;
+}
 
 
 /* Estilo para botones */
@@ -114,18 +118,6 @@ header {
 .boton4:hover {
   background-color: #2a623b; /* Cambia el color al pasar el cursor */
 }
-/* Estilo para el tabla */
-#columna2 {
-    float: right;
-    width: 75%;
-    background-color: rgba(160, 160, 160, 0.5); /* Cambia el color y la opacidad según tus preferencias */
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 2.0);
-}
-
-
 
 .boton5 {
   /* Estilos regulares */
@@ -144,23 +136,23 @@ header {
 .boton5:hover {
   background-color: #ec53a0; /* Cambia el color al pasar el cursor */
 }
-/* Estilo para el tabla */
+
+/* Estilo para el tabla de contraseñas (ajustado para ser responsive) */
 #columna2 {
-    float: right;
-    width: 75%;
-    background-color: rgba(160, 160, 160, 0.5); /* Cambia el color y la opacidad según tus preferencias */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(160, 160, 160, 0.5);
     padding: 10px;
     border-radius: 10px;
     margin-top: 10px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 2.0);
 }
 
-
-
 table {
-  width: 50%;
+  width: 100%;
   border-collapse: collapse;
   text-align: center;
+  table-layout: fixed;
 }
 
 table, th, td {
@@ -169,31 +161,33 @@ table, th, td {
 
 th, td {
   padding: 5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 13px;
 }
 
 th {
   background-color: BLUE;
-  color:;
+  color: white;
 }
 
 td {
   background-color: BLUE;
-  color:;
+  color: white;
 }
 
 
-/* Estilo para el menú */
+/* Estilo para el menú de contraseñas (ajustado para ser responsive) */
 #menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 300px;
-  background-image: 
+  position: static;
+  width: 320px;
+  max-width: 100%;
+  box-sizing: border-box;
+  float: right;
+  margin: 10px;
   padding: 10px;
   border-radius: 0px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: width 0.3s ease;
 }
 
 #menu.collapsed {
@@ -215,24 +209,47 @@ td {
 
 #columna1 {
     float: left;
-    width: 75%;
-    background-color: rgba(0, 0, 0, 0); /* Cambia el color y la opacidad según tus preferencias */
-    padding: 0px;
+    width: 65%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
     border-radius: 0px;
     margin-top: 0px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 .centrado{text-align:center;border:1px dotted #0000; padding:8px;}
-		div{width:50%;border:1px dotted #f000;padding:8px;margin:auto;}
-		center{margin:16px 0;}
-
 .centrado1{text-align:left;border:1px dotted #0000; padding:30px;}
-		div{width:50%;border:1px dotted #f000;padding:40px;margin:auto;}
-		center{margin:16px 3;}
-		
-		
-	</style>
+
+/* Ajustes responsivos para pantallas medianas y móviles */
+@media (max-width: 900px) {
+  #columna1 {
+    float: none;
+    width: 100%;
+  }
+  #menu {
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .boton, .boton1, .boton2, .boton3, .boton4, .boton5 {
+    display: inline-block;
+    font-size: 12px;
+    padding: 8px;
+  }
+  th, td {
+    font-size: 11px;
+    padding: 3px;
+  }
+  .centrado1 {
+    padding: 10px;
+  }
+}
+	
+</style>
 	
 </head>
 
