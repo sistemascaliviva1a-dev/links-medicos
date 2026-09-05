@@ -1,458 +1,418 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LINKS VIVA1A IPS</title>
-	
 <link rel="icon" href="https://images.vexels.com/media/users/3/199980/isolated/preview/4c910ee68a0f4fe8029f72e40bc10fe6-icono-de-navegacion-por-internet-trazo-rosa.png">
-	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-/* Estilo para header */
-body {
-  margin: 0; /* Elimina márgenes por defecto */
-  padding: 0; /* Elimina relleno por defecto */
-}
+  :root{
+    --navy: #0e2340;
+    --navy-2: #163258;
+    --panel: rgba(10, 24, 48, 0.72);
+    --panel-soft: rgba(10, 24, 48, 0.55);
+    --line: rgba(255,255,255,0.14);
+    --ink: #eef2f8;
+    --ink-dim: #b9c4d6;
 
-header {
-  width: 100%;
-  background-color: white;
-  padding: 10px 0; /* Ajusta el espacio interno vertical */
-  text-align: left;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-}
-header img {
-  max-width: 150px;
-  height: auto;
-}
+    --c-clinico: #17a897;
+    --c-clinico-soft: rgba(23,168,151,0.18);
+    --c-formulario: #d6416f;
+    --c-formulario-soft: rgba(214,65,111,0.18);
+    --c-soporte: #d9922b;
+    --c-soporte-soft: rgba(217,146,43,0.18);
+    --c-correo: #4c8fe0;
+    --c-correo-soft: rgba(76,143,224,0.18);
+  }
 
+  *{box-sizing:border-box;}
 
-/* Estilo para botones */
+  html,body{margin:0;padding:0;}
 
-.boton {
-  /* Estilos regulares */
-  border: 8px solid #2e518b;
-  padding: 10px;
-  background-color: #2e518b;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
+  body{
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--ink);
+    background-color: #0b3a63;
+    background-image: url('https://iphoneros.com/wp-content/uploads/2015/02/azul_abstracto_ordenador_iphoneroscom.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+  }
 
-.boton:hover {
-  background-color: #4567a8; /* Cambia el color al pasar el cursor */
-}
+  body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6,14,30,0.30), rgba(6,14,30,0.40));
+    pointer-events: none;
+    z-index: 0;
+  }
 
-.boton1 {
-  /* Estilos regulares */
-  border: 8px solid #ff0000;
-  padding: 10px;
-  background-color: #ff0000;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
+  header, .wrap, footer{
+    position: relative;
+    z-index: 1;
+  }
 
-.boton1:hover {
-  background-color: #EC5353; /* Cambia el color al pasar el cursor */
-}
+  header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding: 14px 28px;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 2px 14px rgba(0,0,0,0.35);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  header img{ height: 42px; width:auto; }
+  header .tag{
+    font-family:'Manrope', sans-serif;
+    font-weight:700;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    color: var(--navy);
+    border-left: 2px solid #ddd;
+    padding-left: 14px;
+  }
 
-.boton2 {
-  /* Estilos regulares */
-  border: 8px solid #04B431;
-  padding: 10px;
-  background-color: #04B431;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
+  .wrap{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 34px 20px 60px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: start;
+  }
 
-.boton2:hover {
-  background-color: #1BCB48; /* Cambia el color al pasar el cursor */
-}
+  .page-title{
+    font-family:'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.15;
+    margin: 0 0 6px;
+  }
+  .page-title span{ color: #7fd6c9; }
+  .page-sub{
+    color: var(--ink-dim);
+    font-size: 14.5px;
+    margin: 0 0 30px;
+  }
 
+  section.category{ margin-bottom: 30px; }
 
-.boton3 {
-  /* Estilos regulares */
-  border: 8px solid #7D2181;
-  padding: 10px;
-  background-color: #7D2181;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
+  .cat-head{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .cat-icon{
+    width: 34px; height: 34px;
+    border-radius: 9px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .cat-icon svg{ width:18px; height:18px; }
+  .cat-head h2{
+    font-family:'Manrope', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .cat-head .count{
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    margin-left: auto;
+  }
 
-.boton3:hover {
-  background-color: #924E7D; /* Cambia el color al pasar el cursor */
-}
-.boton4 {
-  /* Estilos regulares */
-  border: 8px solid #1c542d;
-  padding: 10px;
-  background-color: #1c542d;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+    gap: 12px;
+  }
 
-.boton4:hover {
-  background-color: #2a623b; /* Cambia el color al pasar el cursor */
-}
-
-.boton5 {
-  /* Estilos regulares */
-  border: 8px solid #ff0080;
-  padding: 10px;
-  background-color: #ff0080;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 50px;
-  /* Efecto al pasar el cursor */
-  transition: background-color 0.3s ease;
-}
-
-.boton5:hover {
-  background-color: #ec53a0; /* Cambia el color al pasar el cursor */
-}
-
-/* Estilo para el tabla de contraseñas (ajustado para ser responsive) */
-#columna2 {
-    width: 100%;
-    box-sizing: border-box;
-    background-color: rgba(160, 160, 160, 0.5);
-    padding: 10px;
+  .card-link{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap: 8px;
+    background: var(--panel-soft);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent, #7fd6c9);
     border-radius: 10px;
-    margin-top: 10px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 2.0);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  table-layout: fixed;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-th, td {
-  padding: 5px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  font-size: 13px;
-}
-
-th {
-  background-color: BLUE;
-  color: white;
-}
-
-td {
-  background-color: BLUE;
-  color: white;
-}
-
-
-/* Estilo para el menú de contraseñas (ajustado para ser responsive) */
-#menu {
-  position: static;
-  width: 320px;
-  max-width: 100%;
-  box-sizing: border-box;
-  float: right;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 0px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-#menu.collapsed {
-  width: 50px;
-}
-
-#menu a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-#menu a:hover {
-  background-color: #4567a8;
-}
-
-
-#columna1 {
-    float: left;
-    width: 65%;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 10px;
-    border-radius: 0px;
-    margin-top: 0px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-
-.centrado{text-align:center;border:1px dotted #0000; padding:8px;}
-.centrado1{text-align:left;border:1px dotted #0000; padding:30px;}
-
-/* Ajustes responsivos para pantallas medianas y móviles */
-@media (max-width: 900px) {
-  #columna1 {
-    float: none;
-    width: 100%;
+    padding: 13px 14px;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 1.3;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
   }
-  #menu {
-    float: none;
-    width: 100%;
-    margin: 10px 0;
+  .card-link:hover{
+    background: var(--accent-soft, rgba(255,255,255,0.08));
+    transform: translateY(-2px);
+    border-color: var(--accent, #7fd6c9);
   }
-}
+  .card-link .arrow{
+    flex-shrink:0;
+    opacity: 0.55;
+    width: 14px; height:14px;
+  }
+  .card-link:hover .arrow{ opacity: 1; }
 
-@media (max-width: 480px) {
-  .boton, .boton1, .boton2, .boton3, .boton4, .boton5 {
-    display: inline-block;
+  /* category accent assignment */
+  .clinico{ --accent: var(--c-clinico); --accent-soft: var(--c-clinico-soft); }
+  .formulario{ --accent: var(--c-formulario); --accent-soft: var(--c-formulario-soft); }
+  .soporte{ --accent: var(--c-soporte); --accent-soft: var(--c-soporte-soft); }
+  .correo{ --accent: var(--c-correo); --accent-soft: var(--c-correo-soft); }
+
+  .cat-icon.clinico{ background: var(--c-clinico-soft); color: var(--c-clinico); }
+  .cat-icon.formulario{ background: var(--c-formulario-soft); color: var(--c-formulario); }
+  .cat-icon.soporte{ background: var(--c-soporte-soft); color: var(--c-soporte); }
+  .cat-icon.correo{ background: var(--c-correo-soft); color: var(--c-correo); }
+
+  /* Sidebar: passwords */
+  aside{
+    position: sticky;
+    top: 84px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 16px 20px;
+    backdrop-filter: blur(6px);
+  }
+  .aside-head{
+    display:flex; align-items:center; gap:9px;
+    margin-bottom: 4px;
+  }
+  .aside-head svg{ width:17px; height:17px; color:#7fd6c9; flex-shrink:0; }
+  aside h2{
+    font-family:'Manrope', sans-serif;
+    font-size: 15.5px;
+    font-weight:700;
+    margin:0;
+  }
+  .aside-note{
+    font-size: 11.5px;
+    color: var(--ink-dim);
+    margin: 4px 0 16px;
+    line-height:1.4;
+  }
+
+  .vault-item{
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .vault-item summary{
+    cursor:pointer;
+    list-style:none;
+    padding: 10px 12px;
+    font-size: 12.8px;
+    font-weight: 600;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background: rgba(255,255,255,0.04);
+  }
+  .vault-item summary::-webkit-details-marker{ display:none; }
+  .vault-item summary::after{
+    content: '+';
+    font-size: 15px;
+    color: var(--ink-dim);
+    transition: transform 0.15s ease;
+  }
+  .vault-item[open] summary::after{ transform: rotate(45deg); }
+
+  .vault-body{
+    padding: 10px 12px 12px;
+    font-size: 12.5px;
+  }
+  .vault-row{
+    display:flex;
+    justify-content:space-between;
+    gap: 8px;
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .vault-row:last-child{ border-bottom:none; }
+  .vault-row .k{ color: var(--ink-dim); }
+  .vault-row .v{
+    font-family: 'Manrope', monospace;
+    letter-spacing: 0.02em;
+    display:flex; align-items:center; gap:6px;
+  }
+  .reveal-btn{
+    background:none; border:none; color:#7fd6c9; cursor:pointer;
+    font-size: 11px; padding: 0; text-decoration:underline;
+  }
+  .masked{ letter-spacing: 2px; }
+
+  footer{
+    text-align:center;
+    color: var(--ink-dim);
     font-size: 12px;
-    padding: 8px;
+    padding: 10px 0 30px;
   }
-  th, td {
-    font-size: 11px;
-    padding: 3px;
+
+  @media (max-width: 900px){
+    .wrap{ grid-template-columns: 1fr; }
+    aside{ position: static; }
+    header{ padding: 12px 16px; }
   }
-  .centrado1 {
-    padding: 10px;
-  }
-}
-	
 </style>
-	
 </head>
 
-<body style="background-image: url(https://iphoneros.com/wp-content/uploads/2015/02/azul_abstracto_ordenador_iphoneroscom.jpg) ; color: #efefef ; ">
-	
-<header><img src="https://appcita.viva1a.com.co:8051/citasweb/assets/img/logoViva.png"></header>
+<body>
 
-	
-	<div id="columna1">
-	
-<h1 style="color: #FA00FA">
-	<span style="color: #FFFFFF;">
-	<p class="centrado" >LINKS VIVA1A IPS</p> 
-	</span> 
-		</h1>
-	
-	
-<ol style="list-style: none; font-size: 14px; line-height: 32px; font-weight: bold;">
+<header>
+  <img src="https://appcita.viva1a.com.co:8051/citasweb/assets/img/logoViva.png" alt="Viva1A IPS">
+  <span class="tag">Portal de accesos internos</span>
+</header>
 
-	<a class="boton3" href="https://neps.everestintelligent.com/viva/EverHealth/auth/login" target="_blank">EVEREST NEPS</a>
+<div class="wrap">
 
-	 <a class="boton" href="https://cloud.tg6.everestintelligent.com.co/viva/EverHealth/auth/login" target="_blank">EVEREST 3.0</a> 
-	
-	
+  <main>
+    <h1 class="page-title">Links <span>Viva1A IPS</span></h1>
+    <p class="page-sub">Accesos rápidos a los sistemas, plataformas y formularios que usa el equipo clínico y administrativo.</p>
 
+    <!-- SISTEMAS CLINICOS -->
+    <section class="category">
+      <div class="cat-head">
+        <div class="cat-icon clinico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><circle cx="18" cy="16" r="3"/><path d="M6 15v1a6 6 0 0 0 6 6"/></svg>
+        </div>
+        <h2>Sistemas clínicos</h2>
+        <span class="count">Historia, agenda y resultados</span>
+      </div>
+      <div class="grid">
+        <a class="card-link clinico" href="https://neps.everestintelligent.com/viva/EverHealth/auth/login" target="_blank">Everest NEPS <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://cloud.tg6.everestintelligent.com.co/viva/EverHealth/auth/login" target="_blank">Everest 3.0 <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://appportal.everestintelligent.com/EverHealth/" target="_blank">Everest <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://mipres.sispro.gov.co/MIPRESNOPBS/Login.aspx?ReturnUrl=%2fMIPRESNOPBS" target="_blank">MIPRES <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://medicosviva1a.atheneasoluciones.com/Account/Login?ReturnUrl=%2FResultados%2FConsultaMedicoInterno" target="_blank">Resultados lab Athenea <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://lumierdigital.com:8443/" target="_blank">Lumier RX <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://lumierdigital.com:8443/paciente/login.lu?ipsId=3&token=csbMfnqqN1" target="_blank">Lumier pacientes <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://appcita.viva1a.com.co:8051/laboratorio/agente" target="_blank">Agenda laboratorios <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="http://datacare.viva1a.com.co/datacare/#nbb" target="_blank">Annarlytics resultados lab <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://calculadorahaq.azurewebsites.net/#/calculator/haq" target="_blank">Calculadora HAQ <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://portal.nuevaeps.com.co/Portal/home.jspx" target="_blank">Portal NEPS <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://login.sura.com/sso/servicelogin.aspx?continueTo=https%3A%2F%2Fipsa-version.suramericana.com%2Fipsa&service=salud" target="_blank">IPSA Sura <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link clinico" href="https://login.sura.com/sso/servicelogin.aspx?continueTo=https%3A%2F%2Fagendaweb.suramericana.com%2Fagenda&service=salud" target="_blank">Agenda web Sura <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+    </section>
 
-	
-	<a class="boton" href="https://mipres.sispro.gov.co/MIPRESNOPBS/Login.aspx?ReturnUrl=%2fMIPRESNOPBS" target="_blank">MIPRES</a>
-	
-	
-<a class="boton" href="https://medicosviva1a.atheneasoluciones.com/Account/Login?ReturnUrl=%2FResultados%2FConsultaMedicoInterno" target="_blank">RESULTADOS LAB ATHENEA</a>
-	
-	<a class="boton" href="https://lumierdigital.com:8443/" target="_blank">LUMIER RX</a>
-<a class="boton" href="https://appcita.viva1a.com.co:8051/laboratorio/agente" target="_blank">AGENDA LABORATORIOS</a>
+    <!-- FORMULARIOS Y REPORTES -->
+    <section class="category">
+      <div class="cat-head">
+        <div class="cat-icon formulario">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6M9 16h6M9 8h6"/><rect x="5" y="3" width="14" height="18" rx="2"/></svg>
+        </div>
+        <h2>Formularios y reportes</h2>
+        <span class="count">Reportes, remisiones y documentos</span>
+      </div>
+      <div class="grid">
+        <a class="card-link formulario" href="https://drive.google.com/drive/u/0/folders/1y2099-V_A5dwKBUIWMM5bWF02zFMVz0K" target="_blank">Electros <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link formulario" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=S6q48XMM30ySUZubC9zVp-nqrrGNgSlLvHS057gXxCRUMDYwUU1CUjdBVE9YTkM3MUVUOU1HSVFIRi4u&route=shorturl___.YzJ1OnZpdmExYTpjOm86YmM5YjY0MmNkN2FlMDhkODA4M2EzNWIxNmFhYmM3NGY6NzphY2FkOmVmYWVhMjdjOWU3OThhOTZlYTY5ZWRmMGZlNjg4YjhhNThmNzhhNTg1NDE5NWVlMzIzZGJjZDFjZTJjZDZhZGY6dDpUOk4" target="_blank">Reporte acciones inseguras <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link formulario" href="https://drive.google.com/drive/folders/1n_xI_XGXN9fdHQ0rCqq0aSh7PJ0EsnSS?usp=sharing" target="_blank">Ruta remisión a programas <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link formulario" href="https://forms.office.com/Pages/ResponsePage.aspx?id=S6q48XMM30ySUZubC9zVp3V13hmcafNHn1ZQaELQgyRUMjNCN0tMNEFEWUg3SlJPRjBJTVowSzkzRi4u" target="_blank">Cuéntale a presidencia <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link formulario" href="https://drive.google.com/drive/folders/12DnfGJTReojkiipXMth5XMWNQNx_eVkV" target="_blank">Formatos <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link formulario" href="https://drive.google.com/drive/folders/1OLfyaVUfV6GixjioErCMSygIbIfuhTi0?usp=sharing" target="_blank">Paraclínicos gestantes <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link formulario" href="https://nd.ruaf.gov.co/NDv2/Login?ReturnUrl=%2fNDv2%2fLogoff.aspx" target="_blank">Acta defunción RUAF <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link formulario" href="https://link-paciente.vercel.app/" target="_blank">Seguridad del paciente <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+    </section>
 
-	<br>
-	<br>
-	
-	
-	
-	
-	<a class="boton" href="https://drive.google.com/drive/u/0/folders/1y2099-V_A5dwKBUIWMM5bWF02zFMVz0K" target="_blank">ELECTROS</a>
-<a class="boton" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=S6q48XMM30ySUZubC9zVp-nqrrGNgSlLvHS057gXxCRUMDYwUU1CUjdBVE9YTkM3MUVUOU1HSVFIRi4u&route=shorturl___.YzJ1OnZpdmExYTpjOm86YmM5YjY0MmNkN2FlMDhkODA4M2EzNWIxNmFhYmM3NGY6NzphY2FkOmVmYWVhMjdjOWU3OThhOTZlYTY5ZWRmMGZlNjg4YjhhNThmNzhhNTg1NDE5NWVlMzIzZGJjZDFjZTJjZDZhZGY6dDpUOk4" target="_blank">REPORTE ACCIONES INSEGURAS</a>
-	
-	<a class="boton3" href="https://drive.google.com/drive/folders/1n_xI_XGXN9fdHQ0rCqq0aSh7PJ0EsnSS?usp=sharing" target="_blank">RUTA REMISION a PROGRAMAS</a>
+    <!-- APRENDIZAJE Y SOPORTE -->
+    <section class="category">
+      <div class="cat-head">
+        <div class="cat-icon soporte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+        </div>
+        <h2>Aprendizaje y soporte</h2>
+        <span class="count">Capacitación y mesa de servicio</span>
+      </div>
+      <div class="grid">
+        <a class="card-link soporte" href="http://vivaaprendiendo.com.co/" target="_blank">Viva Aprendiendo <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link soporte" href="https://www.miportalgh.com/" target="_blank">Mi Portal <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link soporte" href="https://orbit.csc1a.com/glpi/index.php?noAUTO=1" target="_blank">Mesa de servicio <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link soporte" href="https://drive.google.com/drive/folders/1HLSXggjnyUmS2WsZDp1D7z8J_VbEW99B" target="_blank">Cita al día <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+        <a class="card-link soporte" href="https://drive.google.com/drive/folders/1fpvjdknQTRTsEUy9u3W6dhik6WElc0ml" target="_blank">Instructivos mesa de servicio <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+	<a class="card-link soporte" href="https://outlook.office.com/mail/" target="_blank">Correo médicos (Outlook) <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+    </section>
 
-<a class="boton" href="https://forms.office.com/Pages/ResponsePage.aspx?id=S6q48XMM30ySUZubC9zVp3V13hmcafNHn1ZQaELQgyRUMjNCN0tMNEFEWUg3SlJPRjBJTVowSzkzRi4u" target="_blank">CUENTALE A PRESIDENCIA</a>
-	<br>
-	<br>
+  </main>
 
-	
-	<a class="boton" href="http://vivaaprendiendo.com.co/" target="_blank">VIVA APRENDIENDO</a>
-	
-	<a class="boton" href="https://www.miportalgh.com/" target="_blank">MI PORTAL</a>
+  <aside>
+    <div class="aside-head">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <h2>Contraseñas</h2>
+    </div>
+    <p class="aside-note">Usuario y contraseña de cada sistema, listos para copiar.</p>
 
-	<a class="boton2" href="https://orbit.csc1a.com/glpi/index.php?noAUTO=1" target="_blank">MESA DE SERVICIO</a>
-<a class="boton4" href="https://drive.google.com/drive/folders/1HLSXggjnyUmS2WsZDp1D7z8J_VbEW99B" target="_blank">CITA AL DIA</a>
+    <details class="vault-item" open>
+      <summary>Usuario lab Athenea</summary>
+      <div class="vault-body">
+        <div class="vault-row"><span class="k">Usuario</span><span class="v">CONSULTAMED</span></div>
+        <div class="vault-row"><span class="k">Contraseña</span><span class="v">Viva1a*md04</span></div>
+      </div>
+    </details>
 
-	<a class="boton1" href="https://drive.google.com/drive/folders/1fpvjdknQTRTsEUy9u3W6dhik6WElc0ml" target="_blank">INSTRUCTIVOS MESA DE SERVICIO</a>
-	
- <a class="boton" href="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3A%2F%2Foutlook.office.com%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Foutlook.office.com%2Fmail%2F&client-request-id=9e3e04a6-21bb-d91d-f7e6-e0793e6e32e6&response_mode=fragment&client_info=1&clidata=1&prompt=select_account&nonce=019f8f09-f65b-7ff3-aa75-118bc3b213bd&state=eyJpZCI6IjAxOWY4ZjA5LWY2NWItN2E0Yi1iYWNmLWE0Y2Y2NWNjZjBlYSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D%7CaHR0cHM6Ly9vdXRsb29rLm9mZmljZS5jb20vbWFpbC8&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&x-client-SKU=msal.js.browser&x-client-VER=5.12.0&response_type=code&code_challenge=eWma47q_w6wjSPE3-Q-83OcS95ev1fkeU2SzN3C8ZQA&code_challenge_method=S256" target="_blank">CORREO MEDICOS</a> 
+    <details class="vault-item" open>
+      <summary>Mesa de servicio</summary>
+      <div class="vault-body">
+        <div class="vault-row"><span class="k">Usuario</span><span class="v">medicos.cambulos</span></div>
+        <div class="vault-row"><span class="k">Contraseña</span><span class="v">VIVA2026</span></div>
+      </div>
+    </details>
 
+    <details class="vault-item" open>
+      <summary>Usuario Lumier</summary>
+      <div class="vault-body">
+        <div class="vault-row"><span class="k">Usuario</span><span class="v">PREMIUM</span></div>
+        <div class="vault-row"><span class="k">Contraseña</span><span class="v">123456</span></div>
+      </div>
+    </details>
 
-<br>
-	<br>
+    <details class="vault-item" open>
+      <summary>Usuario Annarlytics</summary>
+      <div class="vault-body">
+        <div class="vault-row"><span class="k">Usuario</span><span class="v">CONSULTA</span></div>
+        <div class="vault-row"><span class="k">Contraseña</span><span class="v">123456</span></div>
+      </div>
+    </details>
 
-	
+    <details class="vault-item" open>
+      <summary>Correo Outlook</summary>
+      <div class="vault-body">
+        <div class="vault-row"><span class="k">Usuario</span><span class="v">medicos.cambulos@outlook.com</span></div>
+        <div class="vault-row"><span class="k">Contraseña</span><span class="v">Viva1a2026</span></div>
+      </div>
+    </details>
 
-<br>
-<h1 style="color: #FA00FA"><span style="color: #FFFFFF;">
-	
-	<p class="centrado" >LINKS ALTERNOS</p> </span> </h1>
+    <details class="vault-item" open>
+      <summary>Correo Gmail</summary>
+      <div class="vault-body">
+        <div class="vault-row"><span class="k">Usuario</span><span class="v">medico.viva1a.cali@gmail.com</span></div>
+        <div class="vault-row"><span class="k">Contraseña</span><span class="v">Viva1a2020</span></div>
+      </div>
+    </details>
+  </aside>
 
-<a class="boton1" href="https://drive.google.com/drive/folders/12DnfGJTReojkiipXMth5XMWNQNx_eVkV" target="_blank">FORMATOS</a>
-
-<a class="boton" href="https://appportal.everestintelligent.com/EverHealth/" target="_blank">EVEREST</a>
-
-<a class="boton5" href="https://drive.google.com/drive/folders/1OLfyaVUfV6GixjioErCMSygIbIfuhTi0?usp=sharing" target="_blank">PARACLINICOS GESTANTES</a>
-
-<a class="boton" href="https://lumierdigital.com:8443/paciente/login.lu?ipsId=3&token=csbMfnqqN1" target="_blank">LUMIER PACIENTES</a>
-<a class="boton" href="https://nd.ruaf.gov.co/NDv2/Login?ReturnUrl=%2fNDv2%2fLogoff.aspx" target="_blank">ACTA DEFUNCION RUAF</a>
-<a class="boton3" href="https://portal.nuevaeps.com.co/Portal/home.jspx" target="_blank">PORTAL NEPS</a>
-
-<br><br>
-<a class="boton" href="https://calculadorahaq.azurewebsites.net/#/calculator/haq" target="_blank">CALCULADORA HAQ</a>
-
-
-<a class="boton" href="http://datacare.viva1a.com.co/datacare/#nbb" target="_blank">ANNARLYTICS RESULTADOS LAB</a>
-
- <a class="boton" href="https://link-paciente.vercel.app/" target="_blank">SEGURIDAD DEL PACIENTE</a> 
-
-	<a class="boton" href="https://login.sura.com/sso/servicelogin.aspx?continueTo=https%3A%2F%2Fipsa-version.suramericana.com%2Fipsa&service=salud" target="_blank">ipsa</a>
- <a class="boton" href="https://login.sura.com/sso/servicelogin.aspx?continueTo=https%3A%2F%2Fagendaweb.suramericana.com%2Fagenda&service=salud" target="_blank">agenda wep sura</a>
-<!-- -->
-
-</ol>
-		
-		</div>
-
-	
-<div id="menu">
-
-
-<h1 style="color: #FA00FA">
-	<span style="color: #FFFFFF;">
-	<p class="centrado1" >CONTRASEÑAS</p> 
-	</span> 
-		</h1>
-
-<div id="columna2">
-  <table>
-    <tr>
-      <th colspan="2">USUARIO LAB ATHENEA</th>
-    </tr>
-    <tr>
-      <th>USUARIO</th>
-      <th>CONTRASEÑA</th>
-    </tr>
-    <tr>
-      <td>CONSULTAMED</td>
-      <td>Viva1a*md04</td>
-    </tr>
-  </table>
 </div>
 
-<div id="columna2">
-  <table>
-    <tr>
-      <th colspan="2">MESA DE SERVICIO</th>
-    </tr>
-    <tr>
-      <th>USUARIO</th>
-      <th>CONTRASEÑA</th>
-    </tr>
-    <tr>
-      <td>medicos.cambulos</td>
-      <td>VIVA2026</td>
-    </tr>
-  </table>
-</div>
-
-<div id="columna2">
-  <table>
-    <tr>
-      <th colspan="2">USUARIO LUMIER</th>
-    </tr>
-    <tr>
-      <th>USUARIO</th>
-      <th>CONTRASEÑA</th>
-    </tr>
-    <tr>
-      <td>PREMIUM</td>
-      <td>123456</td>
-    </tr>
-  </table>
-</div>
-
-<div id="columna2">
-  <table>
-    <tr>
-      <th colspan="2">USUARIO ANNARLYTICS</th>
-    </tr>
-    <tr>
-      <th>USUARIO</th>
-      <th>CONTRASEÑA</th>
-    </tr>
-    <tr>
-      <td>CONSULTA</td>
-      <td>123456</td>
-    </tr>
-  </table>
-</div>
+<footer>Viva1A IPS — portal interno de accesos</footer>
 
 
-<div id="columna2">
-  <table>
-<tr>
-      <th colspan="2">CORREO OUTLOOK</th>
-    </tr>
-    <tr>
-      <th colspan="2">medicos.cambulos@outlook.com</th>
-    </tr>
-    <tr>
-     <th colspan="2">Viva1a2026</th>
-    </tr>
-  </table>
-</div>
-
-
-<div id="columna2">
-  <table>
-<tr>
-      <th colspan="2">CORREO GMAIL</th>
-    </tr>
-    <tr>
-      <th colspan="2">medico.viva1a.cali@gmail.com</th>
-    </tr>
-    <tr>
-     <th colspan="2">Viva1a2020</th>
-    </tr>
-  </table>
-</div>
-</div>
 </body>
-
 </html>
